@@ -79,7 +79,7 @@ public class NIOClient {
 					int len = client.read(receiveBuffer);
 					if(len > 0){
 						receiveBuffer.flip();
-						System.out.println("获取到服务端反馈的信息：" + new String(receiveBuffer.array(),0,len));
+						System.out.println("获取到服1务端反馈的信息：" + new String(receiveBuffer.array(),0,len));
 						client.register(selector, SelectionKey.OP_WRITE);
 						unFinish = false;
 					}
